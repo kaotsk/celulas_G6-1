@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+	
+    <meta name="description" content="Todo lo que necesita saber de las células humanas">
+    <meta name="author" content="Proyecto de informática, estudiantes de 10mo grado, Colegio María Alvarado">
+    <title>La célula</title>
+
+
+    <!-- jQuery y Bootstrap JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <style>
+      
+    </style>
+</head>
+<body>
+
+ <script>
+    // 1. Saludo automático
+    window.onload = function () {
+        alert("¡Bienvenido nuestro sitio sobre la Teoría Celular!");
+    };
+   // 2. Validación de correo
+    document.querySelector('.suscripcion button').addEventListener('click', function () {
+        const emailInput = document.querySelector('.suscripcion input');
+        const email = emailInput.value;
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (regex.test(email)) {
+            alert("¡Gracias por suscribirte!");
+        } else {
+            alert("Por favor, ingresa un correo válido.");
+        }
+    });
+
+    // 3. Cambiar color de fondo
+    function cambiarFondo() {
+        const colores = ["#e6f7ff", "#90e0ef", "#ade8f4", "#e6ffe6"];
+        const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+        document.body.style.backgroundColor = colorAleatorio;
+    }
+
+    // 4. Mostrar/Ocultar publicidad
+    function togglePublicidad() {
+        const publicidad = document.querySelector('.publicidad');
+        if (publicidad.style.display === "none") {
+            publicidad.style.display = "block";
+        } else {
+            publicidad.style.display = "none";
+        }
+    }
+
+</script>
+
+    <header>
+        <h1>Teoría Celular</h1>
+        <p>La unidad básica de la vida</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="subpagina2.html">Nuestra Genetica</a></li>
+            <li><a href="subpagina3.html">Celulas</a></li>
+			 <li><a href="subpagina4.html">Conclusiones</a></li>
+
+        </ul>
+    </nav>
+
+    <main class="container">
+        <!-- Introducción -->
+        <section>
+            <h2>Introducción del Proyecto</h2>
+            <p>Este proyecto que estamos presentando tiene como objetivo integrar los conceptos fundamentales de la biología, específicamente el estudio de las células, con las herramientas del desarrollo web a través de HTML5. En este proyecto, exploraremos las células a fondo, tanto en organismos unicelulares como pluricelulares, y el ADN y ARN. Además, hemos creado esta página con la finalidad de poder aprender más sobre estos temas, e igualmente queriendo ayudar a demás personas a poder aprender sobre esto, teniendo acceso libre con este HTML.</p>
+        </section>
+
+        <!-- Conceptos -->
+        <section>
+            <h2>Conceptos</h2>
+            <ul>
+                <li>
+                    <h3>La teoría celular</h3>
+                    <p>La teoría celular es un principio esencial en biología y medicina que afirma que todos los seres vivos están formados por células, y que la célula es la unidad fundamental de la vida. Esta teoría fue creada en el siglo XIX por los investigadores alemanes Matthias Schleiden y Theodor Schwann.</p>
+                </li>
+                <li>
+                    <h3>¿Qué son las células?</h3>
+                    <p>La célula constituye la unidad fundamental de todos los organismos. El organismo humano se conforma de billones de células. Proporcionan estructura al organismo, absorben los nutrientes de la comida, transforman estos nutrientes en energía y llevan a cabo funciones especializadas.</p>
+                </li>
+                <li>
+                    <h3>La célula procariota</h3>
+                    <p>Son las que carecen de núcleo definido, por lo que su ADN se halla en el citoplasma, sin estar rodeado por una membrana como sucede en las células eucariotas. Asimismo, incluyen membrana celular, pared celular, citoplasma y ribosomas. Casi todas las células procariotas son organismos de una sola célula.</p>
+                </li>
+                <li>
+                    <h3>Importancia</h3>
+                    <p>Proporcionan soporte al organismo, asimilan los nutrientes de los alimentos, transforman esos nutrientes en energía y llevan a cabo funciones específicas. Las células también poseen el material genético del organismo y tienen la capacidad de replicarse.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Imagen -->
+		<section class="publicidad">
+            <h2>Publicidad</h2>
+            <img src="imagenes/imagen13.jpg" alt="Publicidad">
+        </section>
+		
+        <aside>
+            <img src="imagenes/imagen.PNG" alt="Imagen ilustrativa de una célula">
+        </aside>
+    </main>
+
+        <section class="suscripcion">
+            <h2>Mandanos tu gmail:</h2>
+            <input type="email" placeholder="Ingresa tu correo">
+            <button>Enviar</button>
+        </section>
+        <div style="text-align:center; margin-top: 20px;">
+        <button onclick="cambiarFondo()">Cambiar fondo</button>
+        <button onclick="togglePublicidad()">Mostrar/Ocultar Publicidad</button>
+		
+    <footer>
+        <p>&copy; 2025 Proyecto de informática, Colegio María Alvarado</p>
+    </footer>
+
+</body>
+</html>
